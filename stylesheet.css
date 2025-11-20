@@ -126,7 +126,9 @@ nav {
 
 .main-text h2,
 .main-text h3,
-#about-me .main-container h3 {
+#about-me .main-container h3,
+#experience h3,
+#projects h3 {
     background-image: linear-gradient(to left, #612b91af, #622B91);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -567,9 +569,9 @@ footer .links div {
         font-size: 13px;
     }
 
- #about-me .main-container,
+    #about-me .main-container,
     .about-me-container,
-    .skills-container{
+    .skills-container {
         width: 100%;
     }
 
