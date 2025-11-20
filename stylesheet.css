@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+:root {
+    --primary-color: #622B91;
+    --flat-purple-color: #ece2f56c;
+    --text-color: #2c2c2c;
+    --bg-color: #DDDBD5;
+    --shadow-color: grey;
+    --card-color: #622b9126;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Gabarito", sans-serif;
+    z-index: 1;
+}
+
+body {
+    position: relative;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFC50F' stroke='%23622B91' stroke-width='2' d='M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z'%3E%3C/path%3E%3C/svg%3E") 0 0, auto;
+}
+
+
+/* NAV BAR */
+
+nav {
+    display: flex;
+    padding: 0 25px;
+    background: rgba(97, 43, 145, 0.04);
+    border-radius: 50px;
+    position: fixed;
+    left: 10%;
+    right: 10%;
+    top: 2%;
+    z-index: 9999;
+    border-top: var(--bg-color) 0.01px solid;
+    box-shadow: 2px 2px 5px grey;
+    backdrop-filter: blur(10px);
+}
+
+.nav-bar-list {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-bar-list a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    color: var(--text-color);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar-list a:hover {
+    background: #622B91;
+    color: var(--bg-color);
+}
+
+.logo {
+    width: 50px;
+}
+
+/* PAGES GENERAL STRUCTURE */
+
+#home,
+#about-me,
+#education,
+#projects,
+#experience {
+    width: 100%;
+    height: 100vh;
+    padding: 5%;
+    background: var(--bg-color);
+    background-image: linear-gradient(to left, #612b9100, #612b9137);
+}
+
+.main-background {
+    position: fixed;
+    height: 50%;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 50%;
+}
+
+/* HOME */
+
+#home {
+    display: flex;
+    justify-content: center;
+}
+
+#home .main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 100%;
+}
+
+.main-photo img {
+    width: 25em;
+    border-radius: 50%;
+}
+
+.main-photo {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 30%;
+    border: var(--bg-color) solid 2px;
+    border-radius: 50%;
+    background: var(--card-color);
+}
+
+.welcome {
+    font-size: 1em;
+    color: #2c2c2c;
+}
+
+.main-text h2,
+.main-text h3,
+#about-me .main-container h3 {
+    background-image: linear-gradient(to left, #612b91af, #622B91);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Yeseva One", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 3em;
+}
+
+.main-text h3,
+#about-me .main-container h3 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background: #622B91;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: fit-content;
+}
+
+#home a {
+    text-decoration: none;
+}
+
+.btn-section {
+    display: flex;
+    gap: 5%
+}
+
+.download-cv-btn {
+    all: unset;
+    width: fit-content;
+    padding: 10px 50px;
+    border-radius: 50px;
+    color: #F2F2F2;
+    border: var(--bg-color) 2px solid;
+    background-image: linear-gradient(to left, #612b91af, #622B91);
+    transition: all 0.3s ease-in-out;
+}
+
+.download-cv-btn:hover {
+    width: fit-content;
+    padding: 10px 50px;
+    border-radius: 50px;
+    border: solid 15px;
+    color: #622B91;
+    border: var(--primary-color) 2px solid;
+    background: transparent;
+
+}
+
+.contact-me-btn {
+    all: unset;
+    width: fit-content;
+    padding: 10px 50px;
+    border-radius: 50px;
+    color: var(--primary-color);
+    border: var(--primary-color) 2px solid;
+    transition: all 0.3s ease-in-out;
+}
+
+.brief {
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+/* ABOUT ME */
+
+#about-me {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me .main-container {
+    display: flex;
+    height: 90%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#about-me .about-me-container,
+.skills-container {
+    margin: auto;
+    width: 45%;
+    height: 100%;
+    background: rgba(220, 203, 235, 0.388);
+    padding: 15px 15px;
+    color: #2c2c2c;
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px grey;
+    border-top: #F2F2F2 0.01px solid;
+    overflow: auto;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#about-me .about-me-container {
+    border-radius: 25px;
+}
+
+.about-me-text {
+    border-radius: 25px;
+    fill: var(--primary-color);
+    padding: 5px;
+    font-size: 1.3em;
+}
+
+.skill-cards {
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    width: 100%;
+    height: 100%;
+    padding: 5% 0;
+    gap: 15px;
+
+}
+
+.skill-card {
+    border-right: var(--primary-color) 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+    width: 30%;
+    background: var(--flat-purple-color);
+    border-radius: 25px;
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+.skill-card i {
+    font-size: 2em;
+}
+
+
+/* EDUCATION */
+
+#education {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c2c2c;
+}
+
+#education .main-text {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    color: #2c2c2c;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.gpa-card {
+    width: 25%;
+    padding: 60px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--flat-purple-color);
+    border-radius: 25px;
+    border-top: #F2F2F2 0.01px solid;
+    box-shadow: 2px 2px 5px grey;
+    transition: all 0.2s ease-in;
+    backdrop-filter: blur(10px);
+}
+
+.gpa-card:hover,
+#objective .main-container:hover,
+.project-card:hover,
+.exp-card:hover {
+    scale: 1.05;
+
+}
+
+.fa-graduation-cap {
+    font-size: 100px;
+    color: #622B91;
+    background-image: linear-gradient(to left, #612b91af, #622B91);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gpa-card .my-gpa {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.uni-bullet {
+    border-radius: 25px;
+    fill: var(--primary-color);
+    padding: 5px;
+    font-weight: 500;
+}
+
+.gpa-card .out-of {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#education .main-text h4 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#projects .project-cards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+    padding: 10% 2%;
+    justify-content: space-evenly;
+    overflow: auto;
+}
+
+#projects .project-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 5px;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 15px;
+    background: #622b9126;
+    color: #2c2c2c;
+    box-shadow: 2px 2px 5px grey;
+    border-top: #F2F2F2 0.01px solid;
+    border-right: #f2f2f265 0.01px solid;
+    transition: all 0.2s ease-in;
+
+}
+
+#projects .project-card .card-title {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Young Serif", serif;
+    padding-left: 5px;
+}
+
+#projects .project-card .project-topics {
+    background: rgba(254, 252, 255, 0.35);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+
+}
+
+#projects .project-card .project-description {
+    padding: 5px;
+    height: 110px;
+    border: #f2f2f265 0.01px solid;
+    border-bottom: none;
+    border-radius: 15px;
+
+    overflow: auto;
+}
+
+#projects .project-card .card-btn {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: #622B91;
+    color: #F2F2F2;
+    border: none;
+    border-radius: 50px;
+}
+
+#projects .project-card a {
+    align-self: flex-end;
+}
+
+/* EXPERIENCE */
+
+#experience .exp-card {
+    border-radius: 15px;
+    background-image: linear-gradient(to right, rgba(98, 43, 145, 0.27), rgba(96, 68, 120, 0.102));
+    padding: 15px;
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: space-around;
+    height: 35%;
+    border-top: #F2F2F2 0.01px solid;
+    box-shadow: 2px 2px 5px grey;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease-in;
+}
+
+#experience .exp-card .main-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-info .position {
+    font-size: 25px;
+    font-weight: 600;
+    color: #2c2c2c;
+    font-family: "Young Serif", serif;
+}
+
+.main-info .date {
+    background: var(--primary-color);
+    font-weight: 100;
+    padding: 5px 20px;
+    border-radius: 50px;
+    color: var(--bg-color);
+}
+
+.exp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer a {
+    all: unset;
+}
+
+footer i {
+    font-size: 35px;
+}
+
+footer {
+    z-index: 1;
+    width: 100%;
+    height: fit-content;
+    background: #2c2c2c;
+    color: #F2F2F2;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px
+}
+
+footer .links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+footer .name-and-logo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+footer .links div {
+    border-left: solid #f2f2f265 1px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width:1000px) {
+
+    .main-photo {
+        display: none;
+    }
+
+    .main-container {
+        height: 100vh;
+        margin: auto;
+    }
+
+    nav {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        align-items: center;
+        margin: 0.5% 0 1% 0;
+        z-index: 9999;
+    }
+
+
+    .nav-bar-list {
+        border-top: #F2F2F2 0.01px solid;
+        box-shadow: 2px 2px 5px grey;
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0 25px;
+        background: rgba(97, 43, 145, 0.04);
+        flex: 1;
+        height: fit-content;
+        width: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+
+    }
+
+    nav {
+        width: 30%;
+        left: 35%;
+        right: 35%;
+    }
+
+    .main-photo img {
+        display: none;
+    }
+
+    #about-me .main-container {
+        display: flex;
+        padding: 20px 20px;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+ #about-me .main-container,
+    .about-me-container,
+    .skills-container{
+        width: 100%;
+    }
+
+    #education {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        color: #2c2c2c;
+
+    }
+
+    #education .main-text {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        color: #2c2c2c;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .gpa-card {
+        display: none;
+    }
+
+    .fa-graduation-cap {
+        font-size: 50px;
+        color: #622B91;
+        background-image: linear-gradient(to left, #612b91af, #622B91);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .gpa-card .my-gpa {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    .gpa-card .out-of {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+
+    }
+
+
+    #education .main-text h4 {
+        font-size: 20px;
+        font-weight: 600;
+        text-shadow: 2px 2px 10px grey;
+    }
+
+    #projects .project-cards-container {
+        margin: auto;
+        display: flex;
+        height: 100vh;
+        flex-direction: row;
+        align-content: center;
+        gap: 25px;
+        justify-content: space-evenly;
+        overflow: auto;
+    }
+
+
+    #experience .exp-card {
+        background-image: linear-gradient(to right, rgba(98, 43, 145, 0.27), rgba(96, 68, 120, 0.102));
+        padding: 15px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        height: fit-content;
+        border-top: #F2F2F2 0.01px solid;
+        box-shadow: 2px 2px 5px grey;
+        backdrop-filter: blur(10px);
+    }
+
+
+    #experience .exp-card .main-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-info .position {
+        font-weight: bold;
+        font-size: 16px;
+        color: #2c2c2c;
+        font-family: "Young Serif", serif;
+    }
+
+    .main-info .date {
+        font-size: 12px;
+        font-weight: 100;
+        padding: 5px 20px;
+        border-radius: 50px;
+        color: var(--bg-color);
+
+    }
+
+    .exp-card .description {
+        font-weight: 300;
+
+    }
+
+    .exp-container {
+
+        margin: auto;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px 15px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+
+    }
+
+
+    footer a {
+        all: unset;
+    }
+
+    footer i {
+        font-size: 20px;
+    }
+
+    footer {
+        width: 100%;
+        height: fit-content;
+        background: #2c2c2c;
+        color: #F2F2F2;
+        font-weight: 300;
+        display: grid;
+        justify-content: space-between;
+        padding: 20px
+    }
+
+    footer .links {
+        display: flex;
+        grid-template-columns: repeat(auto, 3);
+        gap: 15px;
+    }
+
+    footer .name-and-logo {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    footer .links div {
+        border-left: solid #f2f2f265 1px;
+        padding: 10px;
+    }
+
+}
+
+footer a {
+    transition: all 0.2s ease-in;
+
+}
+
+footer a:hover {
+    color: #c2a4db;
+
+}
+
+
+::selection {
+    background-color: rgba(97, 43, 145, 0.523);
+    color: ghostwhite;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #622B91;
+    border-radius: 6px;
+}
